@@ -5,7 +5,7 @@ on early-init
 
     # for backwards compatibility
     export EXTERNAL_STORAGE /storage/sdcard0
-    mkdir /storage 0050 system sdcard_r
+    mkdir /storage 0555 system sdcard_r
     mkdir /storage/sdcard0 0000 system system
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
@@ -25,6 +25,23 @@ on fs
     mount_all /fstab.grouper
 
 on post-fs-data
+    # JCROM theme
+    mkdir /data/theme 0775 system system
+    mkdir /data/theme/bootanime 0775 system system
+    mkdir /data/theme/frame 0775 system system
+    mkdir /data/theme/launcher 0775 system system
+    mkdir /data/theme/lockscreen 0775 system system
+    mkdir /data/theme/navikey 0775 system system
+    mkdir /data/theme/notification 0775 system system
+    mkdir /data/theme/wallpaper 0775 system system
+    mkdir /data/theme/screenshot 0775 system system
+    mkdir /data/theme/statusbar 0775 system system
+    mkdir /data/theme/navibar 0775 system system
+    mkdir /data/theme/simeji 0775 system system
+    mkdir /data/theme/sounds 0775 system system
+    mkdir /data/theme/sounds/effect 0775 system system
+    mkdir /data/theme/sounds/bootsound 0775 system system
+
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
@@ -356,4 +373,10 @@ service touch_fw_update /system/bin/sh -c "echo /system/etc/firmware/touch_fw.ek
     user root
     group root
     oneshot
+
+service jctool system/bin/jctool
+	class core
+	user root
+	group root
+	oneshot
 
