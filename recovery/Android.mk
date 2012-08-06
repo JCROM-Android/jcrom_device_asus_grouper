@@ -1,3 +1,4 @@
+ifeq ($(TARGET_PRODUCT),full_grouper)
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
@@ -11,3 +12,4 @@ LOCAL_MODULE := librecovery_ui_grouper
 include $(BUILD_STATIC_LIBRARY)
 
 include $(CLEAR_VARS)
+endif
