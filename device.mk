@@ -164,4 +164,5 @@ WIFI_BAND := 802_11_BG
  $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
 
 $(call inherit-product-if-exists, jcrom/asus/grouper/device-grouper.mk)
+$(call inherit-product-if-exists, jcrom/common/common.mk)
 
