@@ -97,6 +97,14 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
+PRODUCT_PACKAGES += \
+	busybox
+
+PRODUCT_PACKAGES += \
+	jctool \
+	bootsound \
+	stagefright
+
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 # we have enough storage space to hold precise GC data
@@ -138,3 +146,6 @@ PRODUCT_COPY_FILES += \
 
 WIFI_BAND := 802_11_BG
  $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4330/device-bcm.mk)
+
+$(call inherit-product-if-exists, jcrom/common/common.mk)
+
