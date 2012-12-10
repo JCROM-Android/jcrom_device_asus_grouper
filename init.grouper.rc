@@ -50,6 +50,7 @@ on post-fs-data
     mkdir /data/theme/sounds 0775 system system
     mkdir /data/theme/sounds/effect 0775 system system
     mkdir /data/theme/sounds/bootsound 0775 system system
+    mkdir /data/theme/font 0775 system system
 
     mkdir /data/misc/wifi 0770 wifi wifi
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
