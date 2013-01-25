@@ -31,7 +31,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 #JCROM
 $(call inherit-product-if-exists, jcrom/asus/grouper/device-grouper.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.2/JOP40C/527662:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.2 JOP40C 527662 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.2.1/JOP40D/533553:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.2.1 JOP40D 533553 release-keys"
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_grouper
