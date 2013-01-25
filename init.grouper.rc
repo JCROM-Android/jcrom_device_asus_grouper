@@ -47,6 +47,7 @@ on post-fs-data
     mkdir /data/theme/statusbar 0775 system system
     mkdir /data/theme/navibar 0775 system system
     mkdir /data/theme/simeji 0775 system system
+    mkdir /data/theme/atok 0775 system system
     mkdir /data/theme/sounds 0775 system system
     mkdir /data/theme/sounds/effect 0775 system system
     mkdir /data/theme/sounds/bootsound 0775 system system
