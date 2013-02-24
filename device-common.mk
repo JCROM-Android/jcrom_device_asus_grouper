@@ -100,14 +100,6 @@ PRODUCT_PACKAGES += \
     Tag \
     com.android.nfc_extras
 
-PRODUCT_PACKAGES += \
-	busybox
-
-PRODUCT_PACKAGES += \
-	jctool \
-	bootsound \
-	stagefright
-
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 # we have enough storage space to hold precise GC data
