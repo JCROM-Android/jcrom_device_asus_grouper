@@ -1,6 +1,7 @@
-40b15ad807e1cbddca36fd64f60691cc8d621c07 ?broadcom-grouper-jop40c-1bf6a3d7.tgz
-1de7a664e4bf53a5427e31363ae9024c762ab20f ?elan-grouper-jop40c-3c485b17.tgz
-95a5a4b2d35bfcdb4ec5f88487f41bef75d04757 ?invensense-grouper-jop40c-9f366366.tgz
-38383f75dfa5fd1573a8b6501940af848b983a2b ?nvidia-grouper-jop40c-1a641dd0.tgz
-b006a2f1e828af068a6c48a8af87b05dd27ab28b ?nxp-grouper-jop40c-e072af0d.tgz
-2916b2ab791fcc07f1a53802e02860136354ae36 ?widevine-grouper-jop40c-ef747ec3.tgz
+f2987ed79e10ca7eedf272597d73cf0ba1da9de1 ?asus-grouper-jdq39-b6907aa5.tgz
+2c44b29a6f8d8f27ef2a32213d797ebe0de33c00 ?broadcom-grouper-jdq39-4a9b93a2.tgz
+9387a4613b975210c162f473a21febcdb222cde4 ?elan-grouper-jdq39-82c8d127.tgz
+c75661ab80a2eafaeece702eabeb1da927671613 ?invensense-grouper-jdq39-28df082f.tgz
+4a3a61558f9c187b29b35a9c68bae0a8bf480a47 ?nvidia-grouper-jdq39-738059f9.tgz
+420d04b8eab22411bf38d9586c606b370b67d6cf ?nxp-grouper-jdq39-28a5fe9a.tgz
+a8bf7e2856cdad1b73cefffc791c1905ed02f613 ?widevine-grouper-jdq39-73fc49a2.tgz

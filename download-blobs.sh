@@ -34,12 +34,13 @@ install_blobs() {
     done
 }
 
-MAGURO_BLOBS="broadcom-grouper-jop40c-1bf6a3d7.tgz
-              elan-grouper-jop40c-3c485b17.tgz
-              invensense-grouper-jop40c-9f366366.tgz
-              nvidia-grouper-jop40c-1a641dd0.tgz
-              nxp-grouper-jop40c-e072af0d.tgz
-              widevine-grouper-jop40c-ef747ec3.tgz"
+MAGURO_BLOBS="asus-grouper-jdq39-b6907aa5.tgz
+              broadcom-grouper-jdq39-4a9b93a2.tgz
+              elan-grouper-jdq39-82c8d127.tgz
+              invensense-grouper-jdq39-28df082f.tgz
+              nvidia-grouper-jdq39-738059f9.tgz
+              nxp-grouper-jdq39-28a5fe9a.tgz
+              widevine-grouper-jdq39-73fc49a2.tgz"
 
 CSUM_LIST="$PWD/blob-shasums"
 
