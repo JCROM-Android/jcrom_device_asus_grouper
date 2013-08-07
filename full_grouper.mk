@@ -26,12 +26,12 @@ $(call inherit-product-if-exists, jcrom/asus/grouper/device-common.mk)
 $(call inherit-product, device/asus/grouper/device.mk)
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 #JCROM
 $(call inherit-product-if-exists, jcrom/asus/grouper/device-grouper.mk)
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.2.2/JDQ39/573038:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.2.2 JDQ39 573038 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.3/JWR66V/737497:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.3 JWR66V 737497 release-keys"
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_grouper
