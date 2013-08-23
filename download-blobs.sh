@@ -34,13 +34,13 @@ install_blobs() {
     done
 }
 
-MAGURO_BLOBS="asus-grouper-jwr66v-15547c77.tgz
-              broadcom-grouper-jwr66v-fa38dae8.tgz
-              elan-grouper-jwr66v-4235892f.tgz
-              invensense-grouper-jwr66v-0da5128c.tgz
-              nvidia-grouper-jwr66v-2cbbe013.tgz
-              nxp-grouper-jwr66v-202ba26a.tgz
-              widevine-grouper-jwr66v-c6bdbc54.tgz"
+MAGURO_BLOBS="asus-grouper-jwr66y-d9ad928d.tgz
+              broadcom-grouper-jwr66y-af694cc9.tgz
+              elan-grouper-jwr66y-2ece01e1.tgz
+              invensense-grouper-jwr66y-f21f0c49.tgz
+              nvidia-grouper-jwr66y-b3b0003e.tgz
+              nxp-grouper-jwr66y-f5d295e4.tgz
+              widevine-grouper-jwr66y-a0b9cafc.tgz"
 
 CSUM_LIST="$PWD/blob-shasums"
 
