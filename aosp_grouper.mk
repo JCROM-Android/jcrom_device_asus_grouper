@@ -16,3 +16,6 @@
 $(call inherit-product, device/asus/grouper/full_grouper.mk)
 
 PRODUCT_NAME := aosp_grouper
+
+PRODUCT_PACKAGES += \
+    Launcher3
