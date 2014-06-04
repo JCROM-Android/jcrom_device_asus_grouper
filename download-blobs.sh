@@ -34,13 +34,13 @@ install_blobs() {
     done
 }
 
-MAGURO_BLOBS="asus-grouper-kot49h-2567c00c.tgz
-              broadcom-grouper-kot49h-45c0c43a.tgz
-              elan-grouper-kot49h-d3cda89d.tgz
-              invensense-grouper-kot49h-2f4def27.tgz
-              nvidia-grouper-kot49h-73d2765c.tgz
-              nxp-grouper-kot49h-6d4f389b.tgz
-              widevine-grouper-kot49h-51d2ed4b.tgz"
+MAGURO_BLOBS="asus-grouper-ktu84l-8dde86d9.tgz
+              broadcom-grouper-ktu84l-079650ef.tgz
+              elan-grouper-ktu84l-caa1c219.tgz
+              invensense-grouper-ktu84l-fae837a0.tgz
+              nvidia-grouper-ktu84l-22d95d44.tgz
+              nxp-grouper-ktu84l-ece658d1.tgz
+              widevine-grouper-ktu84l-f3760dae.tgz"
 
 CSUM_LIST="$PWD/blob-shasums"
 
