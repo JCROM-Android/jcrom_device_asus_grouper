@@ -1,4 +1,5 @@
-# Copyright (C) 2010 The Android Open Source Project
+#
+# Copyright 2014 JCROM Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -34,9 +35,8 @@ $(call inherit-product-if-exists, jcrom/asus/grouper/device-grouper.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.4.4/KTU84P/1227136:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.4.4 KTU84P 1227136 release-keys"
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_grouper
+PRODUCT_NAME := jcrom_grouper
 PRODUCT_DEVICE := grouper
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus
-
