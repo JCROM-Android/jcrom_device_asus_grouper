@@ -20,13 +20,15 @@ $(call inherit-product, device/asus/grouper/device.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:5.0/LRX21P/1570855:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 5.0 LRX21P 1570855 release-keys"
+
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := aosp_grouper
+PRODUCT_NAME := jcrom_grouper
 PRODUCT_DEVICE := grouper
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := AOSP on Grouper
+PRODUCT_BRAND := google
+PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus
 
 #AOSP
-$(call inherit-product-if-exists, vendor/aosp/asus/grouper/aosp.mk)
-$(call inherit-product, device/aosp/common/aosp.mk)
+$(call inherit-product-if-exists, vendor/aosp/asus/grouper/full.mk)
+$(call inherit-product, device/aosp/common/full.mk)
