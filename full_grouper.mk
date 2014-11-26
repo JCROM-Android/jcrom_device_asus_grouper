@@ -20,6 +20,8 @@ $(call inherit-product, device/asus/grouper/device.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.4.4/KTU84P/1227136:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.4.4 KTU84P 1227136 release-keys"
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_grouper
 PRODUCT_DEVICE := grouper
