@@ -104,6 +104,9 @@ PRODUCT_PACKAGES += \
     e2fsck \
     setup_fs
 
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras
+
 PRODUCT_CHARACTERISTICS := tablet,nosdcard
 
 # we have enough storage space to hold precise GC data
