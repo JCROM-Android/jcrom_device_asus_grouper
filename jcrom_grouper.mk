@@ -29,6 +29,6 @@ PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 7
 PRODUCT_MANUFACTURER := asus
 
-#AOSP
-$(call inherit-product-if-exists, vendor/aosp/asus/grouper/full.mk)
-$(call inherit-product, device/aosp/common/full.mk)
+#JCROM
+$(call inherit-product, jcrom/asus/grouper/device-grouper.mk)
+$(call inherit-product, jcrom/common/common.mk)
