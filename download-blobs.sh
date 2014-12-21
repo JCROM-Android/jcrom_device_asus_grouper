@@ -34,13 +34,13 @@ install_blobs() {
     done
 }
 
-MAGURO_BLOBS="asus-grouper-lrx21p-896ccd01.tgz
-              broadcom-grouper-lrx21p-1220d525.tgz
-              elan-grouper-lrx21p-a53f697e.tgz
-              invensense-grouper-lrx21p-4a1a3ab1.tgz
-              nvidia-grouper-lrx21p-c4905f19.tgz
-              nxp-grouper-lrx21p-d0465c3c.tgz
-              widevine-grouper-lrx21p-78877346.tgz"
+MAGURO_BLOBS="asus-grouper-lrx22g-aec33ad2.tgz
+              broadcom-grouper-lrx22g-c7f54ba9.tgz
+              elan-grouper-lrx22g-580da07a.tgz
+              invensense-grouper-lrx22g-fd3690aa.tgz
+              nvidia-grouper-lrx22g-1d3281e3.tgz
+              nxp-grouper-lrx22g-93aec176.tgz
+              widevine-grouper-lrx22g-179aea10.tgz"
 
 CSUM_LIST="$PWD/blob-shasums"
 
