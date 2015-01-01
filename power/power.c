@@ -32,6 +32,8 @@
 #include <hardware/hardware.h>
 #include <hardware/power.h>
 
+#include <cutils/properties.h>
+
 #define BOOST_PATH      "/sys/devices/system/cpu/cpufreq/interactive/boost"
 #define UEVENT_MSG_LEN 2048
 #define TOTAL_CPUS 4
@@ -41,6 +43,14 @@
 #define LOW_POWER_MIN_FREQ "51000"
 #define NORMAL_MAX_FREQ "1300000"
 #define UEVENT_STRING "online@/devices/system/cpu/"
+
+static char *low_power_max_freq[] = {
+    LOW_POWER_MAX_FREQ,
+    "760000",
+    "860000",
+    "1100000",
+    NORMAL_MAX_FREQ
+};
 
 static int boost_fd = -1;
 static int boost_warned;
@@ -61,6 +71,22 @@ static char *cpu_path_max[] = {
 static bool freq_set[TOTAL_CPUS];
 static bool low_power_mode = false;
 static pthread_mutex_t low_power_mode_lock = PTHREAD_MUTEX_INITIALIZER;
+
+static int get_low_power_max_freq() {
+ 
+    char select_mode[PROPERTY_VALUE_MAX];
+    int select_num = 0;
+
+    property_get("persist.sys.max.freq", select_mode, NULL);
+
+    if ((strcmp(select_mode, "0") == 0) || (strcmp(select_mode, "1") == 0) || 
+        (strcmp(select_mode, "2") == 0) || (strcmp(select_mode, "3") == 0) ||
+        (strcmp(select_mode, "4") == 0)) {
+        select_num = atoi(select_mode);
+    }
+
+    return select_num;
+}
 
 static int sysfs_write(char *path, char *s)
 {
@@ -90,6 +116,7 @@ static int uevent_event()
     char msg[UEVENT_MSG_LEN];
     char *cp;
     int n, cpu, ret, retry = RETRY_TIME_CHANGING_FREQ;
+    int select_num = 0;
 
     n = recv(pfd.fd, msg, UEVENT_MSG_LEN, MSG_DONTWAIT);
     if (n <= 0) {
@@ -112,9 +139,10 @@ static int uevent_event()
 
         pthread_mutex_lock(&low_power_mode_lock);
         if (low_power_mode && !freq_set[cpu]) {
+            select_num = get_low_power_max_freq();
             while (retry) {
                 sysfs_write(cpu_path_min[cpu], LOW_POWER_MIN_FREQ);
-                ret = sysfs_write(cpu_path_max[cpu], LOW_POWER_MAX_FREQ);
+                ret = sysfs_write(cpu_path_max[cpu], low_power_max_freq[select_num]);
                 if (!ret) {
                     freq_set[cpu] = true;
                     break;
@@ -221,18 +249,22 @@ static void grouper_power_hint(__attribute__((unused)) struct power_module *modu
 {
     char buf[80];
     int len, cpu, ret;
+    int select_num = 0;
 
     switch (hint) {
     case POWER_HINT_VSYNC:
         break;
 
     case POWER_HINT_LOW_POWER:
+
+        select_num = get_low_power_max_freq();
+
         pthread_mutex_lock(&low_power_mode_lock);
         if (data) {
             low_power_mode = true;
             for (cpu = 0; cpu < TOTAL_CPUS; cpu++) {
                 sysfs_write(cpu_path_min[cpu], LOW_POWER_MIN_FREQ);
-                ret = sysfs_write(cpu_path_max[cpu], LOW_POWER_MAX_FREQ);
+                ret = sysfs_write(cpu_path_max[cpu], low_power_max_freq[select_num]);
                 if (!ret) {
                     freq_set[cpu] = true;
                 }
